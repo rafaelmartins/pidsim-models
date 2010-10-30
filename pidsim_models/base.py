@@ -17,7 +17,7 @@ class ReferenceModel(object):
     
     name = None
     description = None
-    latex = None
+    transfer_function = None
     
     def __init__(self, locale):
         self._locale = locale
