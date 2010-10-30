@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from distutils.core import setup
+from setuptools import setup
 import pidsim_models
 
 setup(
@@ -29,5 +29,8 @@ setup(
         'Topic :: Scientific/Engineering :: Information Analysis',
         'Topic :: Scientific/Engineering :: Visualization',
         'Topic :: Software Development :: Libraries :: Python Modules',
+    ],
+    install_requires = [
+        'pidsim>=1.0rc4',
     ],
 )
