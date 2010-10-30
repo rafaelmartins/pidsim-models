@@ -29,6 +29,14 @@ class ReferenceModel(object):
     def _parse_callback_parameters(self):
         argspec = inspect.getargspec(self.callback)
         self.args = argspec.args[1:]
+    
+    def get(self, key):
+        attr = getattr(self, key, None)
+        if attr is not None:
+            for locale, string in attr:
+                if locale == self._locale:
+                    return string
+            return attr[0][1]
 
 
 class I18nStr(list):
