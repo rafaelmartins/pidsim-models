@@ -9,6 +9,7 @@
     :license: GPL-2, see LICENSE for more details.
 """
 
+from pidsim.approximation import methods
 from pidsim.types import tf, poly
 from pidsim_models.base import ReferenceModel, I18nStr
 
@@ -56,8 +57,10 @@ class Model4(ReferenceModel):
     
     latex = 'G_p(s) = \\frac{k(1+T_4 s)}{(1+T_1 s)(1+T_2 s)(1+T_3 s)} e^{-T_t s}'
     
-    def callback(self, k, T1, T2, T3, T4, Tt):
-        return tf([], [])
+    def callback(self, k, T1, T2, T3, T4, Tt, pade_order):
+        num = poly([k * T4, k])
+        den = poly([T1, 1]) * poly([T2, 1]) * poly([T3, 1])
+        return tf(num, den) * methods[int(pade_order)](Tt)
 
 
 class Model5(ReferenceModel):
@@ -109,8 +112,8 @@ class Model8(ReferenceModel):
     
     latex = 'G_p(s) = \\frac{1}{(\\tau s +1)}e^{-s}'
     
-    def callback(self, Tau):
-        return tf([], [])
+    def callback(self, Tau, pade_order):
+        return tf([1], [Tau, 1]) * methods[int(pade_order)](1)
 
 
 class Model9(ReferenceModel):
@@ -121,8 +124,9 @@ class Model9(ReferenceModel):
     
     latex = 'G_p(s) = \\frac{1}{(\\tau s +1)^2}e^{-s}'
     
-    def callback(self, Tau):
-        return tf([], [])
+    def callback(self, Tau, pade_order):
+        return tf([1], poly([Tau, 1]) * poly([Tau, 1])) * \
+            methods[int(pade_order)](1)
 
 
 class Model10(ReferenceModel):
@@ -184,22 +188,22 @@ class Model14(ReferenceModel):
     
     latex = 'G_p(s) = \\frac{1}{s(\\tau s + 1)}e^{-s}'
     
-    def callback(self, Tau):
-        return tf([], [])
+    def callback(self, Tau, pade_order):
+        return tf([1], [Tau, 1, 1]) * methods[int(pade_order)](1)
 
 models = {
     1: Model1,
     2: Model2,
     3: Model3,
-    4: None, #Model4,
+    4: Model4,
     5: Model5,
     6: Model6,
     7: Model7,
-    8: None, #Model8,
-    9: None, #Model9,
+    8: Model8,
+    9: Model9,
     10: Model10,
     11: Model11,
     12: Model12,
     13: Model13,
-    14: None, #Model14,
+    14: Model14,
 }
