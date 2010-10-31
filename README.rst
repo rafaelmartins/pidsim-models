@@ -25,5 +25,5 @@ To install, type::
 
 or use pip::
 
-    # pip install pidsim.models
+    # pip install pidsim-models
 

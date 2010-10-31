@@ -5,7 +5,7 @@ from setuptools import setup
 import pidsim_models
 
 setup(
-    name = 'pidsim.models',
+    name = 'pidsim-models',
     version = pidsim_models.__version__,
     license = pidsim_models.__license__,
     description = pidsim_models.__description__,
@@ -31,6 +31,6 @@ setup(
         'Topic :: Software Development :: Libraries :: Python Modules',
     ],
     install_requires = [
-        'pidsim>=1.0rc4',
+        'pidsim>=1.0rc5',
     ],
 )

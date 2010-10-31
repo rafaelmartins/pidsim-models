@@ -87,8 +87,8 @@ class Model6(ReferenceModel):
     transfer_function = 'G_p(s) = \\frac{1}{(s+1)(\\alpha s+1)(\\alpha ^2 s+1)(\\alpha ^3 s+1)}'
     
     def callback(self, Alpha):
-        num = (pol([1, 1]) * poly([Alpha, 1])) * (poly([Alpha * Alpha, 1]) * \
-            pol([Alpha * Alpha * Alpha, 1]))
+        num = (poly([1, 1]) * poly([Alpha, 1])) * (poly([Alpha * Alpha, 1]) * \
+            poly([Alpha * Alpha * Alpha, 1]))
         return tf([1], num)
 
 
@@ -101,7 +101,7 @@ class Model7(ReferenceModel):
     transfer_function = 'G_p(s) = \\frac{1-\\alpha s}{(s+1)^3}'
     
     def callback(self, Alpha):
-        return tf([-Alpha, 1], (pol([1, 1]) * pol([1, 1])) * pol([1, 1]))
+        return tf([-Alpha, 1], (poly([1, 1]) * poly([1, 1])) * poly([1, 1]))
 
 
 class Model8(ReferenceModel):

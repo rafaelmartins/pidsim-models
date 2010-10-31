@@ -44,8 +44,8 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'PIDSIM.models'
-copyright = u'2009-2010, Rafael Goncalves Martins'
+project = u'PIDSIM-models'
+copyright = u'2010, Rafael Goncalves Martins'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -168,7 +168,7 @@ html_static_path = ['_static']
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'PIDSIM,models-doc'
+htmlhelp_basename = 'PIDSIM-models-doc'
 
 
 # -- Options for LaTeX output --------------------------------------------------
@@ -182,7 +182,7 @@ htmlhelp_basename = 'PIDSIM,models-doc'
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'PIDSIM.models.tex', u'PIDSIM.models Documentation',
+  ('index', 'PIDSIM-models.tex', u'PIDSIM-models Documentation',
    u'Rafael Goncalves Martins', 'manual'),
 ]
 
@@ -215,7 +215,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'pidsim.models', u'PIDSIM.models Documentation',
+    ('index', 'pidsim-models', u'PIDSIM-models Documentation',
      [u'Rafael Goncalves Martins'], 1)
 ]
 
