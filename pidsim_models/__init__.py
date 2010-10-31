@@ -21,6 +21,6 @@ __description__ = 'A set of reference models for PIDSIM'
 __url__ = 'http://pidsim.org/'
 __copyright__ = '(c) 2010 %s' % __author__
 __license__ = 'GPL-2'
-__version__ = '0.1'
+__version__ = '0.1.1'
 
 import base
