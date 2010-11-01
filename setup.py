@@ -31,6 +31,6 @@ setup(
         'Topic :: Software Development :: Libraries :: Python Modules',
     ],
     install_requires = [
-        'pidsim>=1.0rc5',
+        'pidsim>=1.0rc6',
     ],
 )
