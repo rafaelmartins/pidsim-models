@@ -2,5 +2,5 @@
 *.py[co]
 build
 dist
-pidsim-models.egg-info
+pidsim_models.egg-info
 MANIFEST
