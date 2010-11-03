@@ -231,9 +231,10 @@ class Model10(ReferenceModel):
     transfer_function = 'G_p(s) = \\frac{100}{(s+10)^2}\\left ( \\frac{1}{s+1} + \\frac{0,5}{s+0,05} \\right )'
     
     def callback(self):
-        den = (poly([1, 10]) * poly([1, 10])) * (tf([1], [1, 1]) + \
-            tf([0.5], [1, 0.05]))
-        return tf([100], den)
+        p1 = tf([100], poly([1, 10]) * poly([1, 10]))
+        p2 = tf([1], [1, 1])
+        p3 = tf([0.5], [1, 0.05])
+        return p1 * (p2 + p3)
 
 
 class Model11(ReferenceModel):
