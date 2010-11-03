@@ -88,7 +88,7 @@ o tempo morto (Tt) e a ordem da aproximação de Padé, utilizada para simular
 o tempo morto.'''),
         ('en_US', u'''\
 The model parameters are the static gain (k), the times T1, T2, T3 and T4,
-the dead time (Tt) and the Padé approximant order, used for simulate the
+the dead time (Tt) and the Padé approximant order, used to simulate the
 dead time.'''),
     ])
     
@@ -112,7 +112,7 @@ class Model5(ReferenceModel):
 O único parâmetro do processo é a sua ordem (n). Os valores sugeridos
 para n são: 1, 2, 3, 4 e 8.'''),
         ('en_US', u'''
-The unique parameter of the model is his order (n). The suggested values
+The unique parameter of the model is its order (n). The suggested values
 for n are: 1, 2, 3, 4 and 8.'''),
     ])
     
@@ -184,7 +184,7 @@ Os parâmetros do processo são a constante de tempo (Tau) e a ordem da
 aproximação de Padé, utilizada para simular o tempo morto.'''),
         ('en_US', u'''\
 The model parameters are the time constant (Tau) and the Padé approximant
-order, used for simulate the dead time.'''),
+order, used to simulate the dead time.'''),
     ])
     
     transfer_function = 'G_p(s) = \\frac{1}{(\\tau s +1)}e^{-s}'
@@ -206,7 +206,7 @@ Os parâmetros do processo são a constante de tempo (Tau) e a ordem da
 aproximação de Padé, utilizada para simular o tempo morto.'''),
         ('en_US', u'''\
 The model parameters are the time constant (Tau) and the Padé approximant
-order, used for simulate the dead time.'''),
+order, used to simulate the dead time.'''),
     ])
     
     transfer_function = 'G_p(s) = \\frac{1}{(\\tau s +1)^2}e^{-s}'
@@ -225,7 +225,7 @@ class Model10(ReferenceModel):
     
     description = I18nStr([
         ('pt_BR', u'Este processo não permite parametrização.'),
-        ('en_US', u'This model does not allow parametrization.'),
+        ('en_US', u'This model does not allow parameterization.'),
     ])
     
     transfer_function = 'G_p(s) = \\frac{100}{(s+10)^2}\\left ( \\frac{1}{s+1} + \\frac{0,5}{s+0,05} \\right )'
@@ -246,7 +246,7 @@ class Model11(ReferenceModel):
     
     description = I18nStr([
         ('pt_BR', u'Este processo não permite parametrização.'),
-        ('en_US', u'This model does not allow parametrization.'),
+        ('en_US', u'This model does not allow parameterization.'),
     ])
     
     transfer_function = 'G_p(s) = \\frac{(s+6)^2}{s(s+1)^2 (s+36)}'
@@ -287,7 +287,7 @@ class Model13(ReferenceModel):
     
     description = I18nStr([
         ('pt_BR', u'Este processo não permite parametrização.'),
-        ('en_US', u'This model does not allow parametrization.'),
+        ('en_US', u'This model does not allow parameterization.'),
     ])
     
     transfer_function = 'G_p(s) = \\frac{1}{s^2 - 1}'
@@ -309,7 +309,7 @@ Os parâmetros do processo são a constante de tempo (Tau) e a ordem da
 aproximação de Padé, utilizada para simular o tempo morto.'''),
         ('en_US', u'''\
 The model parameters are the time constant (Tau) and the Padé approximant
-order, used for simulate the dead time.'''),
+order, used to simulate the dead time.'''),
     ])
     
     transfer_function = 'G_p(s) = \\frac{1}{s(\\tau s + 1)}e^{-s}'
