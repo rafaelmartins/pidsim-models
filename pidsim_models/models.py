@@ -265,7 +265,7 @@ class Model12(ReferenceModel):
     
     description = I18nStr([
         ('pt_BR', u'''\
-Os parâmetros do processo são o Omega e o Zeta. Os valor sugerido para
+Os parâmetros do processo são o Omega e o Zeta. O valor sugerido para
 Zeta é 0.1 e os valores sugeridos para Omega são 1, 2, 5 e 10.'''),
         ('en_US', u'''\
 The model parameters are Omega and Zeta. The suggested value for Zeta
