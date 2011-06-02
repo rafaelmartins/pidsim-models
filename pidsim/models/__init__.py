@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-    pidsim_models
+    pidsim.models
     ~~~~~~~~~~~~~
 
     Main package of pidsim_models.
