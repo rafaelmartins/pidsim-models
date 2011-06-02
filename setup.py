@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 from setuptools import setup
-import pidsim_models
+import pidsim.models as pidsim_models
 
 setup(
     name = 'pidsim-models',
@@ -14,7 +14,8 @@ setup(
     author_email = pidsim_models.__email__,
     url = pidsim_models.__url__,
     platforms = 'any',
-    packages = ['pidsim_models'],
+    packages = ['pidsim.models'],
+    namespace_packages = ['pidsim'],
     classifiers=[
         'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',

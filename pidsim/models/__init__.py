@@ -14,7 +14,7 @@
 
 #TODO: write unit tests and docs
 
-__all__ = ['base']
+__all__ = ['base', 'models']
 __author__ = 'Rafael Goncalves Martins'
 __email__ = 'rafael@rafaelmartins.eng.br'
 __description__ = 'A set of reference models for PIDSIM'
@@ -24,3 +24,4 @@ __license__ = 'GPL-2'
 __version__ = '0.2.1'
 
 import base
+import models

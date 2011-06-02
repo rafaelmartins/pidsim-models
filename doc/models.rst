@@ -1,2 +1,2 @@
-.. automodule:: pidsim_models.models
+.. automodule:: pidsim.models.models
    :members:

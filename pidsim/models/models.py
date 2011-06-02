@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-    pidsim_models.models
+    pidsim.models.models
     ~~~~~~~~~~~~~~~~~~~~
 
     Models implementation.
@@ -9,9 +9,9 @@
     :license: GPL-2, see LICENSE for more details.
 """
 
-from pidsim.approximation import methods
-from pidsim.types import tf, poly
-from pidsim_models.base import ReferenceModel, I18nStr
+from pidsim.core.pade import index as pade_index
+from pidsim.core.types import tf, poly
+from pidsim.models.base import ReferenceModel, I18nStr
 
 class Model1(ReferenceModel):
     
@@ -97,7 +97,7 @@ dead time.'''),
     def callback(self, k, T1, T2, T3, T4, Tt, pade_order):
         num = poly([k * T4, k])
         den = poly([T1, 1]) * poly([T2, 1]) * poly([T3, 1])
-        return tf(num, den) * methods[int(pade_order)](Tt)
+        return tf(num, den) * pade_index[int(pade_order)](Tt)
 
 
 class Model5(ReferenceModel):
@@ -190,7 +190,7 @@ order, used to simulate the dead time.'''),
     transfer_function = 'G_p(s) = \\frac{1}{(\\tau s +1)}e^{-s}'
     
     def callback(self, Tau, pade_order):
-        return tf([1], [Tau, 1]) * methods[int(pade_order)](1)
+        return tf([1], [Tau, 1]) * pade_index[int(pade_order)](1)
 
 
 class Model9(ReferenceModel):
@@ -213,7 +213,7 @@ order, used to simulate the dead time.'''),
     
     def callback(self, Tau, pade_order):
         return tf([1], poly([Tau, 1]) * poly([Tau, 1])) * \
-            methods[int(pade_order)](1)
+            pade_index[int(pade_order)](1)
 
 
 class Model10(ReferenceModel):
@@ -315,7 +315,7 @@ order, used to simulate the dead time.'''),
     transfer_function = 'G_p(s) = \\frac{1}{s(\\tau s + 1)}e^{-s}'
     
     def callback(self, Tau, pade_order):
-        return tf([1], [Tau, 1, 1]) * methods[int(pade_order)](1)
+        return tf([1], [Tau, 1, 1]) * pade_index[int(pade_order)](1)
 
 index = {
     1: Model1,

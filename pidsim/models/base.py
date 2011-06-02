@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-    pidsim_models.base
+    pidsim.models.base
     ~~~~~~~~~~~~~~~~~~
 
     Base reference model.
