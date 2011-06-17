@@ -14,7 +14,10 @@ setup(
     author_email = pidsim_models.__email__,
     url = pidsim_models.__url__,
     platforms = 'any',
-    packages = ['pidsim.models'],
+    packages = [
+        'pidsim',
+        'pidsim.models',
+    ],
     namespace_packages = ['pidsim'],
     classifiers=[
         'Development Status :: 4 - Beta',
