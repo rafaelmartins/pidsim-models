@@ -315,7 +315,7 @@ order, used to simulate the dead time.'''),
     transfer_function = 'G_p(s) = \\frac{1}{s(\\tau s + 1)}e^{-s}'
     
     def callback(self, Tau, pade_order):
-        return tf([1], [Tau, 1, 1]) * pade_index[int(pade_order)](1)
+        return tf([1], [Tau, 1, 0]) * pade_index[int(pade_order)](1)
 
 index = {
     1: Model1,
