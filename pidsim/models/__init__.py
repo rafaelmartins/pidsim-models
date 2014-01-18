@@ -4,7 +4,7 @@
     ~~~~~~~~~~~~~
 
     Main package of pidsim_models.
-    
+
     This package implements a set of reference models to be used with
     PIDSIM.
 
@@ -18,7 +18,7 @@ __all__ = ['base', 'models']
 __author__ = 'Rafael Goncalves Martins'
 __email__ = 'rafael@rafaelmartins.eng.br'
 __description__ = 'A set of reference models for PIDSIM'
-__url__ = 'http://pidsim.org/'
+__url__ = 'https://github.com/rafaelmartins/pidsim-models'
 __copyright__ = '(c) 2010 %s' % __author__
 __license__ = 'GPL-2'
 __version__ = '0.2.1'
